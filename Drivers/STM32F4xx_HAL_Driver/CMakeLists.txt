@@ -1,5 +1,6 @@
 set(sources
     Src/stm32f4xx_hal.c
+    Src/stm32f4xx_hal_cortex.c
     Src/stm32f4xx_hal_gpio.c
     Src/stm32f4xx_hal_rcc.c
     Src/stm32f4xx_hal_rcc_ex.c
