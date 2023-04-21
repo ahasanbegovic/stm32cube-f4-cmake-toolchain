@@ -1,0 +1,2 @@
+add_subdirectory(Components)
+add_subdirectory(STM32F429I-Discovery)

@@ -8,6 +8,9 @@
 
 add_library(stm32f4-toolchain)
 
+#target_link_libraries(stm32f4-toolchain PUBLIC FatFs)
+#target_link_libraries(stm32f4-toolchain PUBLIC STM32_USB_Host_Library)
+
 # set up some defines for the StdPeriph library
 target_compile_definitions(stm32f4-toolchain PUBLIC USE_STDPERIPH_DRIVER)
 target_compile_definitions(stm32f4-toolchain PUBLIC ${DEVICE_FAMILY})
@@ -20,6 +23,8 @@ else()
   set(additional_flags -Os)
 endif()
 
-add_subdirectory(Drivers)
-
 target_compile_options(stm32f4-toolchain PRIVATE ${additional_flags})
+
+add_subdirectory(Drivers)
+add_subdirectory(Middlewares)
+#add_subdirectory(Projects)

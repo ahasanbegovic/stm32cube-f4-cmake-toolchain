@@ -1,0 +1,3 @@
+set(LINKER_SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/STM32F429ZITx_FLASH.ld")
+
+target_link_libraries(${elf_file} PUBLIC -T${LINKER_SCRIPT})

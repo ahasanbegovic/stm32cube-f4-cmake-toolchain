@@ -1,0 +1,3 @@
+target_include_directories(STM32_USB_Host_Library PUBLIC Inc)
+
+add_subdirectory(Src)
